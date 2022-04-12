@@ -32,7 +32,7 @@
  	CostCenter = "ABCD"
      }
  }
-  resource "aws_instance" "web-2" {
+  resource "aws_instance" "web-3" {
      #ami = var.imagename
      ami = "ami-04505e74c0741db8d"
      #ami = "${data.aws_ami.my_ami.id}"
