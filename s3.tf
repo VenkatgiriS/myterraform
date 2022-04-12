@@ -1,6 +1,6 @@
-resource "aws_s3_bucket" "mys3-bucket" {
-  bucket = "my-tf-test-bucket-9550"
-  acl    = "private"
+resource "aws_s3_bucket" "mybucket" {
+  bucket = "my-tf-test-s3bucket"
+  #acl    = "private"
 
   tags = {
     Name        = "FlowLogBucket"
