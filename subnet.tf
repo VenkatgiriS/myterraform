@@ -6,9 +6,6 @@ resource "aws_subnet" "mysubnet1" {
   tags = {
     Name = "${var.subnet1_name}"
   }
-  depends_on = [
-    aws_flow_log.vpcflowlogs,
-  ]
 }
 resource "aws_subnet" "mysubnet2" {
   vpc_id     = aws_vpc.myvpc.id
@@ -18,9 +15,6 @@ resource "aws_subnet" "mysubnet2" {
   tags = {
     Name = "${var.subnet2_name}"
   }
-  depends_on = [
-    aws_flow_log.vpcflowlogs,
-  ]
 }
 resource "aws_subnet" "mysubnet3" {
   vpc_id     = aws_vpc.myvpc.id
@@ -30,7 +24,4 @@ resource "aws_subnet" "mysubnet3" {
   tags = {
     Name = "${var.subnet3_name}"
   }
-  depends_on = [
-    aws_flow_log.vpcflowlogs,
-  ]
 }
