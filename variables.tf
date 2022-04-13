@@ -66,7 +66,7 @@ variable "igw_name" {}
 #variable "subnet3_az" {}
 variable "public_subnets" {
     type = list
-    default = ["us-eat-1a","us-east-1b","us-east-1c"] 
+    default = ["us-east-1a","us-east-1b","us-east-1c"] 
 }
 variable "public_cidrs" {
     type = list
