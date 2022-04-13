@@ -70,6 +70,13 @@ variable "public_subnets" {
 }
 variable "public_cidrs" {
     type = list
-    default = ["20.25.1.0/24","20.25.2.0/24","20.25.3.0/24"]
-  
+    default = ["20.25.1.0/24","20.25.2.0/24","20.25.3.0/24"] 
+}
+variable "private_subnets" {
+    type = list
+    default = ["us-east-1a","us-east-1b","us-east-1c"] 
+}
+variable "private_cidrs" {
+    type = list
+    default = ["20.25.20.0/24","20.25.30.0/24","20.25.40.0/24"] 
 }
