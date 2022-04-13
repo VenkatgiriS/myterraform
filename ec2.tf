@@ -1,5 +1,5 @@
  resource "aws_instance" "web-1" {
-     count =3
+     count =3 #0,1,2
      #ami = var.imagename
      ami = "ami-04505e74c0741db8d"
      #ami = "${data.aws_ami.my_ami.id}"
@@ -10,7 +10,7 @@
      vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
      associate_public_ip_address = true	
      tags = {
-         Name = "Server-1"
+         Name = "Server-${count.index}"
          Env = "Prod"
          Owner = "Venkat"
  	CostCenter = "ABCD"
