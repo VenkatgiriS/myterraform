@@ -1,27 +1,11 @@
-resource "aws_subnet" "mysubnet1" {
+resource "aws_subnet" "public-subnets" {
+  count = 3
   vpc_id     = aws_vpc.myvpc.id
-  cidr_block = "${var.subnet1_cidr}"
-  availability_zone = "${var.subnet1_az}"
-
+  #cidr_block = "${var.subnet1_cidr}"
+  cidr_block = "${element(var.public_subnets, count.index)}"
+  availability_zone = "${element(var.public_cidrs, count.index)}"
   tags = {
-    Name = "${var.subnet1_name}"
-  }
-}
-resource "aws_subnet" "mysubnet2" {
-  vpc_id     = aws_vpc.myvpc.id
-  cidr_block = "${var.subnet2_cidr}"
-  availability_zone = "${var.subnet2_az}"
-
-  tags = {
-    Name = "${var.subnet2_name}"
-  }
-}
-resource "aws_subnet" "mysubnet3" {
-  vpc_id     = aws_vpc.myvpc.id
-  cidr_block = "${var.subnet3_cidr}"
-  availability_zone = "${var.subnet3_az}"
-
-  tags = {
-    Name = "${var.subnet3_name}"
+    Name = "public-subnet-${count.index+1}"
+    Owner = "Venkat"
   }
 }

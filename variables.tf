@@ -55,13 +55,21 @@ variable "secret_key" {}
 variable "vpc_name" {}
 variable "vpc_cidr" {}
 variable "igw_name" {}
-variable "subnet1_name" {}
-variable "subnet2_name" {}
-variable "subnet3_name" {}
-variable "subnet1_cidr" {}
-variable "subnet1_az" {}
-variable "subnet2_cidr" {}
-variable "subnet2_az" {} 
-variable "subnet3_cidr" {}
-variable "subnet3_az" {}
-
+#variable "subnet1_name" {}
+#variable "subnet2_name" {}
+#variable "subnet3_name" {}
+#variable "subnet1_cidr" {}
+#variable "subnet1_az" {}
+#variable "subnet2_cidr" {}
+#variable "subnet2_az" {} 
+#variable "subnet3_cidr" {}
+#variable "subnet3_az" {}
+variable "public_subnets" {
+    type = list
+    default = ["us-eat-1a","us-east-1b","us-east-1c"] 
+}
+variable "public_cidrs" {
+    type = list
+    default = ["20.25.1.0/24","20.25.2.0/24","20.25.3.0/24"]
+  
+}
