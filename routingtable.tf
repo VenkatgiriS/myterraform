@@ -18,12 +18,12 @@ resource "aws_route_table" "private-rt" {
         Name = "Private_Routing_Table"
     }
 }
-resource "aws_route_table_association" "terraform-public" {
+resource "aws_route_table_association" "public-rt-subnet-association" {
     count = 3
     subnet_id = "${element(aws_subnet.public-subnets.*.id , count.index)}"
     route_table_id = "${aws_route_table.public-rt.id}"
 }
-resource "aws_route_table_association" "terraform-public" {
+resource "aws_route_table_association" "private-rt-subnet-association" {
     count = 3
     subnet_id = "${element(aws_subnet.private-subnets.*.id , count.index)}"
     route_table_id = "${aws_route_table.private-rt.id}"
