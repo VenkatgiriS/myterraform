@@ -56,6 +56,7 @@ variable "vpc_name" {}
 variable "vpc_cidr" {}
 variable "igw_name" {}
 variable "region" {}
+variable "env" {}
 #variable "subnet1_name" {}
 #variable "subnet2_name" {}
 #variable "subnet3_name" {}

@@ -1,5 +1,5 @@
  resource "aws_instance" "web-1" {
-     count =3 #0,1,2
+     count = "${var.env == "Prod"}"? 3 : 1 #0,1,2
      #ami = var.imagename
      ami = "${lookup(var.amis,var.region)}"
      #ami = "${data.aws_ami.my_ami.id}"
@@ -11,7 +11,7 @@
      associate_public_ip_address = true	
      tags = {
          Name = "Server-${count.index + 1 }"
-         Env = "Prod"
+         Env = "${var.env}"
          Owner = "Venkat"
  	CostCenter = "ABCD"
      }
