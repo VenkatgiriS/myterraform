@@ -55,6 +55,7 @@ variable "secret_key" {}
 variable "vpc_name" {}
 variable "vpc_cidr" {}
 variable "igw_name" {}
+variable "region" {}
 #variable "subnet1_name" {}
 #variable "subnet2_name" {}
 #variable "subnet3_name" {}
@@ -79,4 +80,13 @@ variable "private_subnets" {
 variable "private_cidrs" {
     type = list
     default = ["20.25.20.0/24","20.25.30.0/24","20.25.40.0/24","20.25.50.0/24","20.25.60.0/24","20.25.70.0/24"] 
+}
+variable "amis" {
+    description = "AMIs by region"
+    default = {
+      us-east-1 = "ami-04505e74c0741db8d" # ubuntu 20.04 LTS
+		  us-east-2 = "ami-0fb653ca2d3203ac1" # ubuntu 20.04 LTS
+		  us-west-1 = "ami-0454207e5367abf01" # ubuntu 16.04 LTS
+		  us-west-2 = "ami-0688ba7eeeeefe3cd" # ubuntu 14.04 LTS
+    }
 }
