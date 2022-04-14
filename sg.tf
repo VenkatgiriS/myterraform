@@ -9,7 +9,7 @@ resource "aws_security_group" "allow_all" {
     to_port          = 443
     protocol         = "tcp"
     cidr_blocks      = [aws_vpc.myvpc.cidr_block]
-    ipv6_cidr_blocks = [aws_vpc.myvpc.ipv6_cidr_block]
+    #ipv6_cidr_blocks = [aws_vpc.myvpc.ipv6_cidr_block]
   }
 
   egress {
