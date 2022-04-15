@@ -7,7 +7,7 @@
      instance_type = "t2.micro"
      key_name = "devops_project"
      subnet_id = "subnet-040a95ea95f4661b9"
-     vpc_security_group_ids = "sg-0b22a8d1d6161e774"
+     vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
      associate_public_ip_address = true	
      tags = {
          Name = "Import"
