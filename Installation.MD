@@ -17,8 +17,10 @@ terraform apply --auto-approve
 terraform destroy
 terraform destroy --auto-approve
 terraform state list
+terraform state rm aws_instance.web-1[0]
 terraform show
 terraform destroy -target=aws_instance.web-1[2]
+
 ```
 #### Terraform workspace
 ```
