@@ -68,7 +68,7 @@ variable "env" {}
 #variable "subnet3_az" {}
 variable "public_subnets" {
     type = list
-    default = ["us-west-1a","us-west-1b","us-west-1c"] 
+    default = ["us-west-1a","us-west-1c"] 
 }
 variable "public_cidrs" {
     type = list
@@ -76,7 +76,7 @@ variable "public_cidrs" {
 }
 variable "private_subnets" {
     type = list
-    default = ["us-west-1a","us-west-1b","us-west-1c"] 
+    default = ["us-west-1a","us-west-1c"] 
 }
 variable "private_cidrs" {
     type = list
