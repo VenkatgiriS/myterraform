@@ -22,7 +22,7 @@ terraform state list
 terraform state rm aws_instance.web-1[0] 
 terraform show
 terraform destroy -target=aws_instance.web-1[2]
-
+terraform import aws_instance.web-10 i-05c999ebf68454f37
 ```
 #### Terraform workspace
 ```
