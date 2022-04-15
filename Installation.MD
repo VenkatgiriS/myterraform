@@ -1,7 +1,9 @@
 ### Installation in Mac
 
-1. Download directly from terraform website.
-Download link ```https://releases.hashicorp.com/terraform/1.1.8/terraform_1.1.8_darwin_amd64.zip```
+1. Download directly from terraform website. For Mac
+Download link ```https://releases.hashicorp.com/terraform/1.1.8/terraform_1.1.8_darwin_amd64.zip```  
+
+   Download Link for Linux ```https://releases.hashicorp.com/terraform/1.1.8/terraform_1.1.8_linux_amd64.zip ```
 
 2. Move Terraform to /usr/local/bin
 
@@ -17,7 +19,7 @@ terraform apply --auto-approve
 terraform destroy
 terraform destroy --auto-approve
 terraform state list
-terraform state rm aws_instance.web-1[0]
+terraform state rm aws_instance.web-1[0] 
 terraform show
 terraform destroy -target=aws_instance.web-1[2]
 
