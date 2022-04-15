@@ -21,6 +21,6 @@
 		sudo apt-get install -y nginx
 		sudo systemctl start nginx
 		sudo systemctl enable nginx
-		echo "<h1>Server-${count.index + 1 }</h1>" | sudo tee /usr/share/nginx/html
+		echo "<h1>Server-${count.index + 1 }</h1>" | sudo tee /usr/share/nginx/html/index.html
 	EOF
  }
