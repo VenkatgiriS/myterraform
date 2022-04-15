@@ -24,6 +24,7 @@ terraform show
 terraform destroy -target=aws_instance.web-1[2]
 terraform import aws_instance.web-10 i-05c999ebf68454f37
 ```
+
 #### Terraform workspace
 ```
 terraform workspace (new/select/show/list/delete/)
