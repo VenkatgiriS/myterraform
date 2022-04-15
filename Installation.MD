@@ -18,6 +18,7 @@ terraform destroy
 terraform destroy --auto-approve
 terraform state list
 terraform show
+terraform destroy -target=aws_instance.web-1[2]
 ```
 #### Terraform workspace
 ```
