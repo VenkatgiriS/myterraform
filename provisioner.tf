@@ -1,5 +1,5 @@
 resource "null_resource" "add_file" {
-  count = "${var.env == "Prod"}" ? 2 : 1
+  count = "${var.env == "Prod"}" ? 3 : 1
   provisioner "file" {
     source      = "script.sh"
     destination = "/tmp/script.sh"
@@ -21,7 +21,7 @@ resource "null_resource" "add_file" {
   
 }
 resource "null_resource" "nginxinstall" {
-  count = "${var.env == "Prod"}" ? 2 : 1
+  count = "${var.env == "Prod"}" ? 3 : 1
   provisioner "remote-exec" {
     inline = [
       "sudo apt update -y",
@@ -41,7 +41,7 @@ resource "null_resource" "nginxinstall" {
   }
 }
 resource "null_resource" "instancedetails" {
-    count = "${var.env == "Prod"}" ? 2 : 1
+    count = "${var.env == "Prod"}" ? 3 : 1
     provisioner "local-exec" {
     command = <<EOH
     echo "${element(aws_instance.web-1.*.public_ip,count.index)}" >> details && echo "${element(aws_instance.web-1.*.private_ip,count.index)}" >> details && echo "${element(aws_instance.web-1.*.public_dns,count.index)}" >> details
