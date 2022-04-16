@@ -12,6 +12,9 @@ Download link ```https://releases.hashicorp.com/terraform/1.1.8/terraform_1.1.8_
 ### Terraform Basic Commands
 ```
 terraform init
+terraform init -backend-config=backend.json
+terraform validate
+terraform fmt
 terraform plan
 terraform plan --var-file terraform.tfvars
 terraform apply
