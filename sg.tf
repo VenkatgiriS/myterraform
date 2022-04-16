@@ -3,7 +3,7 @@ resource "aws_security_group" "allow_all" {
   description = "Allow all inbound traffic"
   vpc_id      = "${aws_vpc.myvpc.id}"
 
-  iingress {
+  ingress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
