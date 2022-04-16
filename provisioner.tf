@@ -28,7 +28,8 @@ resource "null_resource" "nginxinstall" {
       #"sudo ./tmp/script.sh",
       "sudo apt update -y",
       "sudo apt install nginx -y",
-      "sudo service nginx start"
+      "sudo service nginx start",
+      "echo '<h1>Server-${count.index+1}</h1>' | sudo tee /var/www/html/index.nginx-debian.html"
 
     ]
     connection {
