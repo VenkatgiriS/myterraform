@@ -7,7 +7,7 @@ resource "null_resource" "add_file" {
   provisioner "remote-exec" {
       inline = [
       "chmod +x /tmp/script.sh",
-      "sudo ./tmp/script.sh"
+      "sudo /tmp/script.sh"
       ]
   }
     connection {
