@@ -26,8 +26,8 @@ resource "null_resource" "nginxinstall" {
     inline = [
       #"chmod +x /tmp/script.sh",
       #"sudo ./tmp/script.sh",
-      "sudo yum update -y",
-      "sudo yum install nginx -y",
+      "sudo apt update -y",
+      "sudo apt install nginx -y",
       "sudo service nginx start"
 
     ]
