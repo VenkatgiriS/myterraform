@@ -37,7 +37,7 @@ resource "aws_instance" "web-1" {
   connection {
     type        = "ssh"
     user        = "ubuntu"
-    private_key = file("/Desktop/keypairs/devops-project.pem")
+    private_key = file("~/Desktop/keypairs/devops-project.pem")
     host        = element(aws_instance.web-1.*.id, count.index)
   }
 }
