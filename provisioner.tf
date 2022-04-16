@@ -24,8 +24,6 @@ resource "null_resource" "nginxinstall" {
   count = "${var.env == "Prod"}" ? 2 : 1
   provisioner "remote-exec" {
     inline = [
-      #"chmod +x /tmp/script.sh",
-      #"sudo ./tmp/script.sh",
       "sudo apt update -y",
       "sudo apt install nginx -y",
       "sudo service nginx start",
