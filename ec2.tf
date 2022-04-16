@@ -1,5 +1,5 @@
 resource "aws_instance" "web-1" {
-  count = "${var.env == "Prod"}" ? 2 : 1 #0,1,2
+  count = "${var.env == "Prod"}" ? 3 : 1 #0,1,2
   #ami = var.imagename
   ami = lookup(var.amis, var.region)
   #ami = "${data.aws_ami.my_ami.id}"
