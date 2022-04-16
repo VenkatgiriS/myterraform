@@ -72,7 +72,7 @@ variable "public_subnets" {
 }
 variable "public_cidrs" {
     type = list
-    default = ["20.25.1.0/24","20.25.2.0/24","20.25.3.0/24","20.25.4.0/24","20.25.5.0/24","20.25.6.0/24"] 
+    default = ["20.25.1.0/24","20.25.2.0/24","20.25.3.0/24"] 
 }
 variable "private_subnets" {
     type = list
@@ -80,7 +80,7 @@ variable "private_subnets" {
 }
 variable "private_cidrs" {
     type = list
-    default = ["20.25.20.0/24","20.25.30.0/24","20.25.40.0/24","20.25.50.0/24","20.25.60.0/24","20.25.70.0/24"] 
+    default = ["20.25.20.0/24","20.25.30.0/24","20.25.40.0/24"] 
 }
 variable "amis" {
     description = "AMIs by region"
