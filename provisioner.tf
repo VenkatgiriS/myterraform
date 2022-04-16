@@ -6,7 +6,8 @@
         type        = "ssh"
         user        = "ubuntu"
         private_key = file("devops_project.pem")
-        host        = self.public_ip
+        host = aws_instance.web-1.public_ip
+        #host        = self.public_ip
         #host        = element(aws_instance.web-1.*.public_ip, count.index)
       }
     }
