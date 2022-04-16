@@ -26,6 +26,8 @@ resource "null_resource" "nginxinstall" {
     inline = [
       "sudo apt update -y",
       "sudo apt install nginx -y",
+      "sudo apt install cowsay -y",
+      "cowsay 'Hi Venkatgiri'",
       "sudo service nginx start",
       "echo '<h1>Server-${count.index+1}</h1>' | sudo tee /var/www/html/index.nginx-debian.html"
 
