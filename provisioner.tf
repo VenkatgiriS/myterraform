@@ -41,3 +41,13 @@ resource "null_resource" "nginxinstall" {
     }
   }
 }
+resource "null_resource" "instancedetails" {
+
+    provisioner "local-exec" {
+    command = <<EOH
+    echo "${aws_instance.web-1.public_ip}" >> details && echo "${aws_instance.web-1.private_ip}" >> details && echo "${aws_instance.web-1.public_dns}" >> details
+    EOH
+  }
+    
+    depends_on = ["aws_instance.web-1"]
+}
