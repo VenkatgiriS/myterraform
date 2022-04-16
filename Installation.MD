@@ -36,4 +36,11 @@ terraform workspace (new/select/show/list/delete/)
 terraform workspace list
 terraform workspace new dev
 terraform workspace select default
+
+```
+#### Terraform Logging
+```
+  export TF_LOG=TRACE
+  export TF_LOG_PATH="terraform.txt"
+  unset TF_LOG
 ```
