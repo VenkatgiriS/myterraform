@@ -29,8 +29,7 @@ resource "null_resource" "nginxinstall" {
       "sudo apt install cowsay -y",
       "cowsay 'Hi Venkatgiri'",
       "sudo service nginx start",
-      "echo '<h1>HiVenkatgiri.ThisisServer-${count.index+1}</h1>' | sudo tee /var/www/html/index.nginx-debian.html"
-
+      "echo '<h1>Hi_Venkatgiri.This_is_Server-${count.index+1}</h1>' | sudo tee /var/www/html/index.nginx-debian.html"
     ]
     connection {
       type = "ssh"
