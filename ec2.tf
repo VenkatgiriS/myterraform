@@ -23,11 +23,11 @@ resource "aws_instance" "web-1" {
   # 	sudo systemctl enable nginx
   # 	echo "<h1>Server-${count.index + 1 }</h1>" | sudo tee /var/www/html/index.nginx-debian.html
   # EOF
-  lifecycle {
-    #create_before_destroy = true
-    #prevent_destroy = true
-    ignore_changes = [
-      tags,
-    ]
-  }
+  # lifecycle {
+  #   create_before_destroy = true
+  #   prevent_destroy = true
+  #   ignore_changes = [
+  #     tags,
+  #   ]
+  # }
 }
