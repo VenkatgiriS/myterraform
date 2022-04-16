@@ -38,6 +38,6 @@ resource "aws_instance" "web-1" {
     type        = "ssh"
     user        = "ubuntu"
     private_key = "${file("devops_project.pem")}"
-    host        = element(aws_instance.web-1.*.id, count.index)
+    host        = element(aws_instance.web-1.*.public_ip, count.index)
   }
 }
