@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in {1..30}
+for i in {1..3}
 do
 echo "Number is $i"
 sleep 1
