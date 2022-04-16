@@ -3,6 +3,7 @@ resource "null_resource" "add_file" {
   provisioner "file" {
     source      = "script.sh"
     destination = "/tmp/script.sh"
+  }
   provisioner "remote-exec" {
       inline = [
       "chmod +x /tmp/script.sh",
@@ -17,7 +18,7 @@ resource "null_resource" "add_file" {
       #host        = self.public_ip
       host = element(aws_instance.web-1.*.public_ip, count.index)
     }
-  }
+  
 }
 resource "null_resource" "nginxinstall" {
   count = "${var.env == "Prod"}" ? 2 : 1
