@@ -42,13 +42,12 @@ resource "null_resource" "nginxinstall" {
   }
 }
 resource "null_resource" "instancedetails" {
-
+    count = "${var.env == "Prod"}" ? 2 : 1
     provisioner "local-exec" {
     command = <<EOH
-    echo "${aws_instance.web-1.public_ip}" >> details && echo "${aws_instance.web-1.private_ip}" >> details && echo "${aws_instance.web-1.public_dns}" >> details
+    echo "${element(aws_instance.web-1.*.public_ip)}" >> details && echo "${element(aws_instance.web-1.*.private_ip)}" >> details && echo "${element(aws_instance.web-1.*.public_dns)}" >> details
     EOH
   }
-    
     depends_on = [
     aws_instance.web-1,
   ]
