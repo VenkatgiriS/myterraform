@@ -49,5 +49,7 @@ resource "null_resource" "instancedetails" {
     EOH
   }
     
-    depends_on = ["aws_instance.web-1"]
+    depends_on = [
+    aws_instance.web-1,
+  ]
 }
