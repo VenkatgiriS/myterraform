@@ -21,6 +21,8 @@ terraform apply
 terraform apply --auto-approve
 terraform destroy
 terraform destroy --auto-approve
+terraform refresh
+terraform get
 terraform state list
 terraform state rm aws_instance.web-1[0] 
 terraform show
