@@ -1,7 +1,7 @@
 ### Installation in Mac
 
 1. Download directly from terraform website. For Mac
-Download link ```https://releases.hashicorp.com/terraform/1.1.8/terraform_1.1.8_darwin_amd64.zip```  
+Download link ```https://releases.hashicorp.com/terraform/1.1.7/terraform_1.1.7_darwin_amd64.zip```  
 
    Download Link for Linux ```https://releases.hashicorp.com/terraform/1.1.8/terraform_1.1.8_linux_amd64.zip ```
 
